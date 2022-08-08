@@ -41,7 +41,7 @@ contract FundMe {
         s_addressToAmountFunded[msg.sender] = msg.value;
     }
 
-    function withdraw() public onlyOwner {
+    function withdraw() public payable onlyOwner {
         for (
             uint256 funderIndex = 0;
             funderIndex < s_funders.length;
